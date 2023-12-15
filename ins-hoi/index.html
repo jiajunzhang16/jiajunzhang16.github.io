@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ins-HOI Project Page</title>
+<!-- Bootstrap -->
+<link href="./css/bootstrap-4.0.0.css" rel="stylesheet">
+</head>
+
+
+<body>
+<div id="page_container">
+<header>
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h5 class="text-center">Anonymous website</h5>
+          <h2 class="text-center">Ins-HOI: Instance Aware Human-Object Interactions Recovery
+          </h1>
+          <p class="text-center">&nbsp;</p>
+          <h6 class="text-center">Anonymous Submission</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <h2>&nbsp;</h2>
+    <div class="row">
+      <div class="col-lg-14 col-md-14 col-sm-14 text-center offset-xl-0 col-xl-12"> <img src="assets/teaser.png"
+              width="950" alt="" />
+      <br>
+        <p class="text-justify"> </p>
+        <p class="text-justify"> We present Ins-HOI, a novel method for instance-level humans/hands and objects interaction recovery. 
+          Ins-HOI is an implicit-based approach achieves accurate reconstruction of individual geometry and non-visible contact areas.</p>
+    </div>
+  </div>
+
+  <div class="container">
+    <p>&nbsp;</p>
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+        <h2>Abstract</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 text-center  offset-xl-0 col-xl-12">
+        <p class="text-left"><em>
+          Recovering detailed interactions between humans/hands and objects is an appealing yet challenging task. 
+          Existing methods typically use template-based representations to track human/hand and objects in interactions. 
+          Despite the progress, they fail to handle the invisible contact surfaces. 
+          In this paper, we propose Ins-HOI, an end-to-end solution to recover human/hand-object reconstruction via instance-level implicit reconstruction. 
+          To this end, we introduce an instance-level occupancy field to support simultaneous human/hand and object representation, and a complementary training strategy to handle the lack of instance-level ground truths. 
+          Such a representation enables learning a contact prior implicitly from sparse observations. 
+          During the complementary training, we augment the real-captured data with synthesized data by randomly composing individual scans of humans/hands and objects and intentionally allowing for penetration. 
+          In this way, our network learns to recover individual shapes as completely as possible from the synthesized data, while being aware of the contact constraints and overall reasonability based on real-captured scans. 
+          As demonstrated in experiments, our method Ins-HOI can produce reasonable and realistic non-visible contact surfaces even in cases of extremely close interaction. 
+          To facilitate the research of this task, we collect a large-scale, high-fidelity 3D scan dataset, including 5.2k high-quality scans with real-world human-chair and hand-object interactions. 
+          We will release our dataset and source codes.
+          </em></p>
+        <p class="text-left">&nbsp;</p>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2>Overview</h2>
+        <div class="col-lg-14 col-md-14 col-sm-14 text-center offset-xl-0 col-xl-12"> <img
+            src="assets/pipeline.png" width="950" alt="" />
+        </div>
+        <br>
+        <p class="text-justify"> </p>
+        <p class="text-justify"> Overview of the method: (a) showcases the synthetic data augmentation process using THuman and Ins-Sit dataset to form a training dataset. 
+          (b) highlights how the training components provide unique guidance for complementary learning (blue and pink denote the human and chair meshes; purple and red indicate the union and intersection). 
+          (c) depicts our benchmark Ins-HOI, which given sparse view inputs to produce instance-level human-object recovery via an end-to-end approach.</p>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2>Ins-Sit and Ins-Grasp dataset</h2>
+        <div class="col-lg-14 col-md-14 col-sm-14 text-center offset-xl-0 col-xl-12"> <img
+            src="assets/dataset_1.png" width="950" alt="" />
+        </div>
+        <br>
+        <p class="text-justify"> </p>
+        <p class="text-justify"> Ins-Sit dataset comprises 4700 scans, involving 72 subjects (12 females and 60 males). Each subject 
+          seated on 2 of 11 distinct chair types and perform 60 unique poses.</p>
+        <br>
+        <div class="col-lg-14 col-md-14 col-sm-14 text-center offset-xl-0 col-xl-12"> <img
+            src="assets/dataset_2.png" width="950" alt="" />
+        </div>
+        <br>
+        <p class="text-justify"> </p>
+        <p class="text-justify"> Ins-Grasp dataset comprises 500 scans, involving 50 object types, each involved 10 distinct interactions. </p>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-lg-12 mb-4 mt-2 text-center">
+      <h2>Demo Video</h2>
+    </div>
+  </div>
+
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+    <video controls="controls" width="1024" height="576">
+      <source src="assets/ins-hoi_supp.mp4" type="video/mp4">
+    </video>
+    <p>&nbsp;</p>
+  </div>
+   <hr>
+
+  <div class="row">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+    <h2>Real-World Dynamic Demo</h2>
+    <p>&nbsp;</p>
+    <p class="text-justify"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       1 of 6 input views</p>
+    
+  </div>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 text-center col-xl-12">
+      <video width="" height="700" muted autoplay="autoplay" loop="loop">
+        <source src="assets/realworld.mp4" type="video/mp4">
+      </video>
+      <p>&nbsp;</p>
+    </div>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xl-12 text-center">
+      <h2>Supplementary Results</h2>
+      <p>&nbsp;</p>
+    </div>
+  </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 text-center col-xl-12">
+            <video width="" height="280" muted autoplay="autoplay" loop="loop">
+              <source src="assets/c_1.mp4" type="video/mp4">
+            </video>
+            <p>&nbsp;</p>
+            <video width="" height="280" muted autoplay="autoplay" loop="loop">
+              <source src="assets/c_2.mp4" type="video/mp4">
+            </video>
+            <p>&nbsp;</p>
+            <video width="" height="280" muted autoplay="autoplay" loop="loop">
+              <source src="assets/c_3.mp4" type="video/mp4">
+            </video>
+            <p>&nbsp;</p>
+            <video width="" height="280" muted autoplay="autoplay" loop="loop">
+              <source src="assets/c_4.mp4" type="video/mp4">
+            </video>
+            <p>&nbsp;</p>
+            <video width="" height="280" muted autoplay="autoplay" loop="loop">
+              <source src="assets/c_5.mp4" type="video/mp4">
+            </video>
+            <p>&nbsp;</p>
+            <video width="" height="280" muted autoplay="autoplay" loop="loop">
+              <source src="assets/c_6.mp4" type="video/mp4">
+            </video>
+            <p>&nbsp;</p>
+            <video width="" height="280" muted autoplay="autoplay" loop="loop">
+              <source src="assets/h_1.mp4" type="video/mp4">
+            </video>
+            <p>&nbsp;</p>
+            <video width="" height="280" muted autoplay="autoplay" loop="loop">
+              <source src="assets/h_2.mp4" type="video/mp4">
+            </video>
+            <p>&nbsp;</p>
+            <video width="" height="280" muted autoplay="autoplay" loop="loop">
+              <source src="assets/h_3.mp4" type="video/mp4">
+            </video>
+            <p>&nbsp;</p>
+            <video width="" height="280" muted autoplay="autoplay" loop="loop">
+              <source src="assets/h_4.mp4" type="video/mp4">
+            </video>
+            <p>&nbsp;</p>
+            <video width="" height="280" muted autoplay="autoplay" loop="loop">
+              <source src="assets/h_5.mp4" type="video/mp4">
+            </video>
+            <p>&nbsp;</p>
+            <video width="" height="280" muted autoplay="autoplay" loop="loop">
+              <source src="assets/h_6.mp4" type="video/mp4">
+            </video>
+            <p>&nbsp;</p>
+            <video width="" height="280" muted autoplay="autoplay" loop="loop">
+              <source src="assets/h_7.mp4" type="video/mp4">
+            </video>
+            <p>&nbsp;</p>
+          </div>
+        </div>
+        <hr>      
+        
+        
+</section>
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="./js/jquery-3.2.1.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap-4.0.0.js"></script>
+  <style>
+    .myimg {
+      vertical-align: top;
+    }
+  </style>
+</body>
+
+</html>
+
+
+
+  
+
